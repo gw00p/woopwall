@@ -1,5 +1,5 @@
-// simplewall
-// Copyright (c) 2019-2022 Henry++
+// woopwall
+// Copyright (c) 2019-2022 gw00p
 
 #include "global.h"
 
@@ -264,7 +264,7 @@ VOID _app_db_parse_app (
 		return;
 
 	// workaround for native paths
-	// https://github.com/henrypp/simplewall/issues/817
+	// https://github.com/gw00p/woopwall/issues/817
 	if (_r_str_isstartswith2 (&string->sr, L"\\device\\", TRUE))
 	{
 		dos_path = _r_path_dospathfromnt (string);

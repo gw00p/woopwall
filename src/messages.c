@@ -1,5 +1,5 @@
-// simplewall
-// Copyright (c) 2021,2022 Henry++
+// woopwall
+// Copyright (c) 2021,2022 gw00p
 
 #include "global.h"
 

@@ -1,5 +1,5 @@
-// simplewall
-// Copyright (c) 2016-2022 Henry++
+// woopwall
+// Copyright (c) 2016-2022 gw00p
 
 #pragma once
 
@@ -131,11 +131,11 @@ typedef enum _ENUM_INFO_DATA2
 #define SZ_WARNING_SVCHOST L"Be careful, through service host (svchost.exe)" \
 	L"internet traffic can let out through unexpected ways. Continue?"
 
-#define SZ_HELP L"\"simplewall.exe -install\" - enable filtering.\r\n" \
-	L"\"simplewall.exe -install -temp\" - enable filtering until reboot.\r\n" \
-	L"\"simplewall.exe -install -silent\" - enable filtering without prompt.\r\n" \
-	L"\"simplewall.exe -uninstall\" - remove all installed filters.\r\n" \
-	L"\"simplewall.exe -help\" - show this message."
+#define SZ_HELP L"\"woopwall.exe -install\" - enable filtering.\r\n" \
+	L"\"woopwall.exe -install -temp\" - enable filtering until reboot.\r\n" \
+	L"\"woopwall.exe -install -silent\" - enable filtering without prompt.\r\n" \
+	L"\"woopwall.exe -uninstall\" - remove all installed filters.\r\n" \
+	L"\"woopwall.exe -help\" - show this message."
 
 #define BACKUP_HOURS_PERIOD _r_calc_hours2seconds (4) // make backup every X hour(s) (default)
 

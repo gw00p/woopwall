@@ -1,5 +1,5 @@
-// simplewall
-// Copyright (c) 2022 Henry++
+// woopwall
+// Copyright (c) 2022 gw00p
 
 #pragma once
 

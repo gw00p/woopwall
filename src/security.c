@@ -1,5 +1,5 @@
-// simplewall
-// Copyright (c) 2020-2022 Henry++
+// woopwall
+// Copyright (c) 2020-2022 gw00p
 
 #include "global.h"
 
@@ -116,10 +116,10 @@ PACL _app_createaccesscontrollist (
 		{
 			// versions of SW before v3.0.5 added Carte blanche for current user
 			//
-			// src: https://github.com/henrypp/simplewall/blob/v.2.3.12/src/main.cpp#L8273
-			// src: https://github.com/henrypp/simplewall/blob/v.2.3.13/src/main.cpp#L8354
-			// src: https://github.com/henrypp/simplewall/blob/v.2.4.6/src/main.cpp#L8828
-			// src: https://github.com/henrypp/simplewall/blob/v.3.0.5/src/wfp.cpp#L109
+			// src: https://github.com/gw00p/woopwall/blob/v.2.3.12/src/main.cpp#L8273
+			// src: https://github.com/gw00p/woopwall/blob/v.2.3.13/src/main.cpp#L8354
+			// src: https://github.com/gw00p/woopwall/blob/v.2.4.6/src/main.cpp#L8828
+			// src: https://github.com/gw00p/woopwall/blob/v.3.0.5/src/wfp.cpp#L109
 			if (RtlEqualSid (&ace->SidStart, config.pbuiltin_current_sid))
 			{
 				if ((ace->Mask & (FWPM_GENERIC_EXECUTE | FWPM_GENERIC_WRITE | DELETE | WRITE_DAC | WRITE_OWNER)) != 0)
@@ -128,9 +128,9 @@ PACL _app_createaccesscontrollist (
 
 			// versions of SW before v3.1.1 added Carte blanche for Everyone
 			//
-			// src: https://github.com/henrypp/simplewall/blob/v.2.4.6/src/main.cpp#L8833
-			// src: https://github.com/henrypp/simplewall/blob/v.3.0.5/src/wfp.cpp#L114
-			// src: https://github.com/henrypp/simplewall/blob/v.3.1.1/src/wfp.cpp#L150
+			// src: https://github.com/gw00p/woopwall/blob/v.2.4.6/src/main.cpp#L8833
+			// src: https://github.com/gw00p/woopwall/blob/v.3.0.5/src/wfp.cpp#L114
+			// src: https://github.com/gw00p/woopwall/blob/v.3.1.1/src/wfp.cpp#L150
 			else if (RtlEqualSid (&ace->SidStart, &SeEveryoneSid))
 			{
 				if (((ace->Mask & ~(FWPM_ACTRL_CLASSIFY | FWPM_ACTRL_OPEN)) & (FWPM_GENERIC_EXECUTE | FWPM_GENERIC_READ)) != 0)
@@ -259,10 +259,10 @@ VOID _app_setsecurityinfoforengine (
 
 			// versions of SW before v3.0.5 added Carte blanche for current user
 			//
-			// src: https://github.com/henrypp/simplewall/blob/v.2.3.12/src/main.cpp#L8273
-			// src: https://github.com/henrypp/simplewall/blob/v.2.3.13/src/main.cpp#L8354
-			// src: https://github.com/henrypp/simplewall/blob/v.2.4.6/src/main.cpp#L8815
-			// src: https://github.com/henrypp/simplewall/blob/v.3.0.5/src/wfp.cpp#L96
+			// src: https://github.com/gw00p/woopwall/blob/v.2.3.12/src/main.cpp#L8273
+			// src: https://github.com/gw00p/woopwall/blob/v.2.3.13/src/main.cpp#L8354
+			// src: https://github.com/gw00p/woopwall/blob/v.2.4.6/src/main.cpp#L8815
+			// src: https://github.com/gw00p/woopwall/blob/v.3.0.5/src/wfp.cpp#L96
 			if (RtlEqualSid (&ace->SidStart, config.pbuiltin_current_sid))
 			{
 				if ((ace->Mask == (FWPM_GENERIC_ALL | DELETE | WRITE_DAC | WRITE_OWNER)))
@@ -271,9 +271,9 @@ VOID _app_setsecurityinfoforengine (
 
 			// versions of SW before v3.1.1 added Carte blanche for Everyone
 			//
-			// src: https://github.com/henrypp/simplewall/blob/v.2.4.6/src/main.cpp#L8820
-			// src: https://github.com/henrypp/simplewall/blob/v.3.0.5/src/wfp.cpp#L101
-			// src: https://github.com/henrypp/simplewall/blob/v.3.1.1/src/wfp.cpp#L137
+			// src: https://github.com/gw00p/woopwall/blob/v.2.4.6/src/main.cpp#L8820
+			// src: https://github.com/gw00p/woopwall/blob/v.3.0.5/src/wfp.cpp#L101
+			// src: https://github.com/gw00p/woopwall/blob/v.3.1.1/src/wfp.cpp#L137
 			else if (RtlEqualSid (&ace->SidStart, &SeEveryoneSid))
 			{
 				if (((ace->Mask & ~(FWPM_ACTRL_CLASSIFY | FWPM_ACTRL_OPEN)) & (FWPM_GENERIC_ALL)) != 0)
